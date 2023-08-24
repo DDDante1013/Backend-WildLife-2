@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WILD LIFE/Inicio</title>
+    <link rel="stylesheet" href="CSS/style-inicio.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7b4fce43cc.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+</head>
+
+<body class="inicio-sesion"> 
+    <header class="header">
+        <div class="logo">
+            <img id="logo-img" src="imagenes/LOGO.png" alt="logo" />
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-link ">
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#listaProductos">Productos</a></li>
+                <li class="item"><a href="#">Contacto</a></li>
+                <li class="item"><a href="#">Carrito</a></li>
+                <li class="item-button"><a href="INICIO.HTML">Crear Cuenta</a></li>
+                <li class="item-button-secondary"><a href="/INICIO.HTML">Iniciar sesion</a></li>
+            </ul>
+            <button class="button-menu"> <i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+    <form class="login">
+        <div class="contenedor-inicio">
+            <h1>Registro</h1>
+            <div class="subContainer">
+                <div class="subSubContainer">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" required />
+                </div>
+                <div class="subSubContainer">
+                    <label for="usuario">Nombre de usuario</label>
+                    <input type="text" id="usuario" />
+                </div>
+            </div>
+            <div class="subContainer">
+                <div class="subSubContainer">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" />
+                </div>
+                <div class="subSubContainer">
+                    <label for="passwordRepeat">Repetir Password</label>
+                    <input type="password" id="passwordRepeat" />
+                </div>
+            </div>
+            <div class="subContainer">
+                <div class="subSubContainer">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" />
+                </div>
+                <div class="subSubContainer">
+                    <label for="telefono">Teléfono </label>
+                    <input type="tel" id="telefono" />
+                </div>
+            </div>
+            <div class="subContainer">
+                <div class="subSubContainer">
+                    <label for="nacionalidad">Nacionalidad</label>
+                    <select id="nacionalidad">
+                        <option value="argentina">Argentina</option>
+                        <option value="uruguay">Uruguay</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="chile">Chile</option>
+                    </select>
+                </div>
+                <div class="subSubContainer">
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento" />
+                </div>
+            </div>
+            <label>Género</label>
+            <div class="subContainer">
+                <div class="subSubContainer">
+                    <input type="radio" id="masculino" />
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div class="subSubContainer">
+                    <input type="radio" id="femenino" />
+                    <label for="femenino">Femenino</label>
+                </div>
+                <div class="subSubContainer">
+                    <input type="radio" id="noEspecificado" />
+                    <label for="noEspecificado">No especificado</label>
+                </div>
+            </div>
+            <div class="subSubContainer">
+                <label for="terminos">Términos y condiciones</label>
+                <input type="checkbox" id="terminos" />
+                <button type="submit">Registrarse</button>
+            </div>
+        </div>
+    </form>
+    <footer class="footer">
+        <div class="footer-datos">
+            <div class="datos">
+                <ul class="datos">
+                    <li>EL HALCON 900</li>
+                    <li>Valle de Anisacate</li>
+                    <li>Cordoba, Argentina</li>
+                    <li>CP:5000</li>
+                </ul>
+            </div>
+            <nav class="nav-bar-footer">
+                <ul class="nav-link-footer">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#listaProductos">Productos</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="boton-suscripcion">
+                <p id="suscripcion">QUIERO SUSCRIBIRME AL NEWSLETTER</p>
+                <form action="/suscripcion">
+                    <input type="text" placeholder="Correo electronico" />
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+        <div class="pie-de-pagina">
+            <p><small> 2023 WILF LIFE - Todos los derechos reservados </small></p>
+        </div>
+    </footer>
+</body>
+
+</html>

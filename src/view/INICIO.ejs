@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WILD LIFE/Inicio</title>
+  <link rel="stylesheet" href="/css/style-inicio.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/7b4fce43cc.js" crossorigin="anonymous"></script>
+  <script defer src="index.js"></script>
+</head>
+
+<body class="inicio-sesion">
+  <header>
+    <%- include ("./partials/header.ejs") %>
+  </header>
+
+  <form class="login">
+    <div class="contenedor-inicio">
+
+
+      <h1 id="texto-inicio">Hola! Completa los datos para acceder a tu cuenta.</h1>
+
+      <label for="userName">Nombre de Usuario</label>
+      <input type="text" id="userName" placeholder="Usuario" />
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="Contraseña" />
+      <div class="recordad-usuario">
+        <label for="rememberUser">Recordar Usuario</label>
+        <input type="checkbox" id="rememberUser" />
+
+      </div>
+      <div class="olvide-contraseña">
+        <label for="staylogged">Olvide contraseña</label>
+        <input type="checkbox" id="staylogged" />
+      </div>
+      <button class="btn-1" type="submit">Ingresar</button>
+  </form>
+  </div>
+  <footer>
+    <%- include ("./partials/footer.ejs") %>
+  </footer>
+</body>
+
+</html>

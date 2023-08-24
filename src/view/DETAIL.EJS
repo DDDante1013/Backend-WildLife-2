@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WILD LIFE/Detalle Productos</title>
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/7b4fce43cc.js" crossorigin="anonymous"></script>
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <header>
+    <%- include ("./partials/header.ejs") %>
+  </header>
+  <main>
+    <div class="contenedor-producto">
+      <img src="imagenes/carpa1.JPG" alt="carpa bike pro" class="ImagenArticulo">
+      
+      <div class="descripcion">
+        <H1>Carpa BIKE PRO 2 - Northland </H1>
+        <p>Las carpas bike de Northland son un clásico del camping.
+          Son de muy fácil armado y bien livianas. Ideales para los mochileros o viajes de larga duración y rotación de
+          lugares.
+          Excelente calidad.
+        </p>
+          <ul class="lista1">
+            <li>Carpa BIKE PRO 2 personas</li>
+            <li>Ultralivana, facilita el traslado en kayak, bici, moto, montaña, etc</li>
+            <li>Medidas: 155 x 210 x 115 cm + avance.</li>
+            <li>Peso: 2,900 kg.</li>
+            <li>Bolso de transporte: 61 x 14 x 14 cm.</li>
+            <li>Cuerpo de la carpa de poliester respirable.</li>
+            <li>Entrada con mosquitero.</li>
+            <li>Ventana de ventilación en el dobletecho.</li>
+            <li>Impermeabilidad: 2000 columnas de agua.</li>
+          </ul>
+          <p ><strong> $99.000 </strong></p>
+        <button>Agregar al Carrito</button>
+      </div>
+    </div>
+  </main>
+  <footer >
+    <%- include ("./partials/footer.ejs") %>
+  </footer>
+</body>
+
+</html>
