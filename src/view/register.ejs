@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ("./partials/head.ejs") %>
+
+  <body class="inicio-sesion">
+    <header>
+      <%- include ("./partials/header.ejs") %>
+    </header>
+    <form class="login" action="/register" method="post">
+      <div class="contenedor-inicio">
+        <h1>Registro</h1>
+        <div class="subContainer">
+          <div class="subSubContainer">
+            <label for="firstName">Nombre</label>
+            <input type="text" id="firstName" name="firstName" />
+          </div>
+          <div class="subSubContainer">
+            <label for="lastName">Apellido</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+          <div class="subSubContainer">
+            <label for="userName">Nombre de usuario</label>
+                    <input type=" text" id="usuario" name="userName" />
+          </div>
+        </div>
+        <div class="subContainer">
+          <div class="subSubContainer">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div class="subSubContainer">
+            <label for="passwordRepeat">Repetir Password</label>
+            <input type="password" id="passwordRepeat" name="repeatPassword" />
+          </div>
+        </div>
+        <div class="subContainer">
+          <div class="subSubContainer">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="subSubContainer">
+            <label for="phoneNumber">Teléfono </label>
+            <input type="tel" id="telefono" name="phoneNumber" />
+          </div>
+        </div>
+        <div class="subContainer">
+          <div class="subSubContainer">
+            <label for="nacionalidad">Nacionalidad</label>
+            <select id="nacionalidad" name="nacionalidad">
+              <option value="argentina">Argentina</option>
+              <option value="uruguay">Uruguay</option>
+              <option value="brasil">Brasil</option>
+              <option value="mexico">Mexico</option>
+              <option value="chile">Chile</option>
+            </select>
+          </div>
+          <div class="subSubContainer">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="nacimiento" name="nacimiento" />
+          </div>
+        </div>
+        <label>Género</label>
+        <div class="subContainer">
+          <div class="subSubContainer">
+            <input type="radio" id="masculino" />
+            <label for="masculino">Masculino</label>
+          </div>
+          <div class="subSubContainer">
+            <input type="radio" id="femenino" />
+            <label for="femenino">Femenino</label>
+          </div>
+          <div class="subSubContainer">
+            <input type="radio" id="noEspecificado" />
+            <label for="noEspecificado">No especificado</label>
+          </div>
+        </div>
+        <div class="subSubContainer">
+          <label for="terminos">Términos y condiciones</label>
+          <input type="checkbox" id="terminos" />
+          <button type="submit">Registrarse</button>
+        </div>
+      </div>
+    </form>
+    <footer <%- include ("./partials/footer.ejs") %>
+    </footer>
+  </body>
+
+</html>

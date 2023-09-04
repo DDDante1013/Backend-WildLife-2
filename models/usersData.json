@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "nombre": "USER",
+    "apellido": "USER",
+    "password": "contraseña",
+    "repeatPassword": "contraseña",
+    "email": "email",
+    "telefono": "3511623",
+    "nacionalidad": "Argentino",
+    "nacimiento": "03032023"
+  },
+  {
+    "id": 2,
+    "nombre": "luke",
+    "apellido": "skywalker",
+    "password": "123",
+    "repeatPassword": "123",
+    "email": "jedi@hotmail.com",
+    "telefono": "123456",
+    "nacionalidad": "argentina",
+    "nacimiento": ""
+  },
+  {
+    "id": 3,
+    "nombre": "leia",
+    "apellido": "organa",
+    "password": "1234",
+    "repeatPassword": "1234",
+    "email": "jedi@hotmail.com",
+    "telefono": "123456",
+    "nacionalidad": "argentina",
+    "nacimiento": "2023-09-03"
+  },
+  {
+    "id": 4,
+    "nombre": "dante",
+    "apellido": "durando",
+    "password": "",
+    "repeatPassword": "",
+    "email": "dante.durando@gmail.com",
+    "telefono": "3547637031",
+    "nacionalidad": "argentina",
+    "nacimiento": ""
+  },
+  {
+    "id": 5,
+    "nombre": "Darth",
+    "apellido": "Vader",
+    "password": "",
+    "repeatPassword": "",
+    "email": "sith@gmail.com",
+    "telefono": "3547637031",
+    "nacionalidad": "argentina",
+    "nacimiento": ""
+  }
+]
