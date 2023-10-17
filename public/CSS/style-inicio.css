@@ -98,6 +98,10 @@ p {
   padding: 50px;
 }
 
+.escondido{
+  display: none;
+}
+
 #texto-inicio{
   text-align: center;
   width: 90%;

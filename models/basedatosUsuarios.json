@@ -1,8 +1,20 @@
-[
-    {
-    "id":1,
-    "nombre de usuario":"dante.durando",
-    "email":"dante.durando@gmail.com",
-    "password":"123456"
-    }
-]
+{
+    "users":[
+        {
+            "userName":"lukejedi10",
+            "password":"123456",
+            "email":"jedi@gmail.com"
+        },
+        {
+            "userName":"",
+            "password":"",
+            "email":""
+        },
+        {
+            "userName":"",
+            "password":"",
+            "email":""
+        }
+
+    ]
+}

@@ -1,12 +1,15 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
+
 const sesions = require("express-session");
-const unDia = 1000 * 60 * 60 * 24;
-const bcrypt = require("bcrypt");
+
+const dotenv = require("dotenv").config();
+
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
@@ -35,19 +38,10 @@ app.use(express.static("public"));
 //404
 
 app.use((req, res, next ) =>{
-  res.status(404).render("../src/view/404");
+  res.status(404).render("../src/view/404")
 });
 
 
-app.use(
-  sesions({
-    secret: "123456",
-    saveUninitialized: true,
-    cookie: { maxAge: unDia },
-    resave: false,
-  })
-);
-
-
+//Server
 
 app.listen(PORT, () => console.log("listening on port:", PORT));

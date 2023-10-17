@@ -4,9 +4,8 @@
 <%- include ("./partials/head.ejs") %>
 
 <body class="inicio-sesion">
-  <header>
+
     <%- include ("./partials/header.ejs") %>
-  </header>
 
   <form class="login" action="/login" method="post">
     <div class="contenedor-inicio">
@@ -27,12 +26,13 @@
         <label for="staylogged">Olvide contraseña</label>
         <input type="checkbox" id="staylogged" />
       </div>
-      <button class="btn-1" type="submit">Ingresar</button>
+      <button class="btn-1" type="submit" onclick="">Ingresar</button>
   </form>
+  <p>¿Todavía no tenés una cuenta? - <a href="/register">Registrate</a></p>
   </div>
-  <footer>
+
     <%- include ("./partials/footer.ejs") %>
-  </footer>
+
 </body>
 
 </html>

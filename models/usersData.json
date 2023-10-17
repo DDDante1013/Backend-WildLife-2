@@ -1,56 +1,34 @@
 [
   {
-    "id": 1,
-    "nombre": "USER",
-    "apellido": "USER",
-    "password": "contraseña",
-    "repeatPassword": "contraseña",
-    "email": "email",
-    "telefono": "3511623",
-    "nacionalidad": "Argentino",
-    "nacimiento": "03032023"
-  },
-  {
-    "id": 2,
-    "nombre": "luke",
-    "apellido": "skywalker",
-    "password": "123",
-    "repeatPassword": "123",
-    "email": "jedi@hotmail.com",
-    "telefono": "123456",
-    "nacionalidad": "argentina",
-    "nacimiento": ""
-  },
-  {
-    "id": 3,
-    "nombre": "leia",
-    "apellido": "organa",
-    "password": "1234",
-    "repeatPassword": "1234",
-    "email": "jedi@hotmail.com",
-    "telefono": "123456",
-    "nacionalidad": "argentina",
-    "nacimiento": "2023-09-03"
-  },
-  {
-    "id": 4,
+    "id": null,
     "nombre": "dante",
     "apellido": "durando",
-    "password": "",
-    "repeatPassword": "",
+    "usuario": "dasdas",
+    "hashPassword": "$2b$10$M/hfGAKR8ShceYTj.tv6BOZCX2l1EY10q7ExRBfOmmQ/SNYmVWyIK",
     "email": "dante.durando@gmail.com",
     "telefono": "3547637031",
     "nacionalidad": "argentina",
     "nacimiento": ""
   },
   {
-    "id": 5,
-    "nombre": "Darth",
-    "apellido": "Vader",
-    "password": "",
-    "repeatPassword": "",
-    "email": "sith@gmail.com",
-    "telefono": "3547637031",
+    "id": 2,
+    "nombre": "leia",
+    "apellido": "organa",
+    "usuario": "leiaor1",
+    "hashPassword": "$2b$10$VNh3H3NIx2jTCgjNVMHgfeX92Yw4mlhgxNKTZWrV2rw8b8x9vRgRy",
+    "email": "leia@gmail.com",
+    "telefono": "111111111",
+    "nacionalidad": "argentina",
+    "nacimiento": ""
+  },
+  {
+    "id": 3,
+    "nombre": "darth",
+    "apellido": "vader",
+    "usuario": "darthvader",
+    "hashPassword": "$2b$10$o4FCwjIgQErnD1y4C8W0.ugJSRBzidnzTjzNnPkGqByHDhaoBeEn.",
+    "email": "vader@gmail.com",
+    "telefono": "111111111",
     "nacionalidad": "argentina",
     "nacimiento": ""
   }

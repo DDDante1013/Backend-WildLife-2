@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WILD LIFE/Carrito</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/7b4fce43cc.js" crossorigin="anonymous"></script>
+        <script defer src="index.js"></script>
+      </head>
+<body>
+  <%- include ("./partials/header.ejs") %>
+
+    <div>
+        <table class="tablaCarrito">
+            <tr class="tituloTabla">
+                <th>Producto</th>
+                <th>Descripcion</th>
+                <th>Precio Unidad</th>
+                <th>Cantidad</th>
+                <th>Precio Total</th>
+                <th><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button></th>
+            </tr>
+<tr class="contenidoCarrito">
+    <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
+      <td> <p> Carpa 2 Personas</p></td>
+      <td><p> 1</p></td>
+      <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
+      <td> <p> 1</p> </td>
+      <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
+</tr>
+<tr class="contenidoCarrito">
+  <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
+    <td> <p> Carpa 2 Personas</p></td>
+    <td><p> 1</p></td>
+    <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
+    <td> <p> 1</p> </td>
+    <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
+</tr>
+<tr class="contenidoCarrito">
+  <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
+    <td> <p> Carpa 2 Personas</p></td>
+    <td><p> 1</p></td>
+    <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
+    <td> <p> 1</p> </td>
+    <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
+</tr>
+<tr class="contenidoCarrito">
+  <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
+    <td> <p> Carpa 2 Personas</p></td>
+    <td><p> 1</p></td>
+    <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
+    <td> <p> 1</p> </td>
+    <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
+</tr>
+        </table>
+    </div>
+    <%- include ("./partials/footer.ejs") %>
+</body>
+</html>

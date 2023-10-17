@@ -15,7 +15,18 @@ const registerCheck = [
     .isEmpty()
     .isLength({ min: 3, max: 10 })
     .withMessage("please enter only characters"),
-    check("email")
+  check("userName")
+   .exists()
+   .not()
+   .isEmpty()
+   .isLength({ min: 3, max: 10 })
+   .withMessage("nombr de usuario incorrecto"),
+  check("password")
+  .exists()
+  .not()
+  .isEmpty()
+  .isLength({ min: 3, max: 10 }), 
+  check("email")
     .exists()
     .isEmail()
     .withMessage("ingrese un email valido"),
