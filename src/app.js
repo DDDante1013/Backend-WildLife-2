@@ -8,10 +8,7 @@ const sesions = require("express-session");
 
 const dotenv = require("dotenv").config();
 
-
-
 app.use(bodyParser.urlencoded({ extended: true }));
-
 
 //Settings
 
@@ -22,7 +19,7 @@ const path = require("path");
 
 //Middlewares
 
-app.use(morgan("tiny"));
+app.use(morgan("dev"));
 app.use(express.urlencoded({extended:false}));
 app.use(cookieParser());
 

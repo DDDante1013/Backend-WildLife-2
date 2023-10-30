@@ -55,11 +55,11 @@ body {
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 20px;
-  margin-right: 20px;
+  margin-right: 35px;
   padding: 10px;
   color: white;
 }
-.nav-link li:hover {
+.item:hover {
   transform: scale(1.15);
 }
 
@@ -72,10 +72,42 @@ body {
   font-weight: 900;
 }
 
-.escondido{
-  display: none;
+.Submenu {
+  position:absolute;
+  background:#718355; 
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+ }
+
+.Submenu li{
+  display: block;
+  padding: 20px 11px;
+  color: white;
+  text-decoration: none;
 }
 
+
+.nav-link li:hover .Submenu{
+  visibility: visible;
+  opacity: 1;
+}
+
+.logout{
+  background: none;
+  border:none;
+  color:white;
+  font-family:"Montserrat";
+  font-size: 20px;
+  font-weight: 900;
+  padding: 20px;
+  cursor: pointer;
+  }
+.logout:hover{
+  color: black;
+  font-weight: 900;
+  transform:scale(1.15) ;
+} 
 #h1 {
   color: rgb(19, 22, 13);
   font-size: 30px;
