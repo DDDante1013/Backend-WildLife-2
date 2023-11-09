@@ -51,12 +51,12 @@ const contenedorTarjeta = document.getElementById("productos-container");
 
 function crearTarjetaProductos(product) {
   product.forEach((producto) => {
-    const nuevoProducto = document.createElement("div");
+    const nuevoProducto = document.createElement("article");
     nuevoProducto.classList = "tarjeta-producto";
     nuevoProducto.innerHTML = `
-    <img src="https://github.com/DDDante1013/Backend-WildLife-2/blob/cc7e84312c37c9dc527c28927bf70f0e2df57bde/public/Imagenes/${producto.id}.jpg">
-    <h3>${producto.nombre}</h3>  
-    <p>$${producto.precio}</p>
+    <img src="./Public/Imagenes/${producto.id}.jpg">
+    <h3 class="textoCarpa">${producto.nombre}</h3>  
+    <p><strong>$${producto.precio}</strong></p>
     <button> Agregar al carrito</button>
     `;
     contenedorTarjeta.appendChild(nuevoProducto);
