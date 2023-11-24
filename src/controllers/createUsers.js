@@ -1,25 +1,42 @@
-
-const read =require("./read");
-const writeJSON = require("./write");
+const connection = require("./connectionData");
 const bcrypt = require("bcrypt");
 const salt = bcrypt.genSaltSync(10);
 
-const createUsers = (req, res) => {
-    let oldJSON = read();
-    const newUser = {
-      id: oldJSON.length + 1,
-      nombre: req.body.firstName,
-      apellido: req.body.lastName,
-      usuario: req.body.userName,
-      hashPassword: bcrypt.hashSync(req.body.password, salt),
-      email: req.body.email,
-      telefono: req.body.phoneNumber,
-      nacionalidad: req.body.nacionalidad,
-      nacimiento: req.body.nacimiento,
-    };
-    oldJSON.push(newUser);
-    writeJSON(oldJSON);
-    res.sendStatus(200);
-}
+const createUsers = async (req, res) => {
+  let nombre = req.body.firstName;
+  let apellido = req.body.lastName;
+  let usuario = req.body.userName;
+  let hashPassword = bcrypt.hashSync(req.body.password, salt);
+  console.log(hashPassword);
+  let email = req.body.email;
+
+  let registerUser =
+    "INSERT INTO users ( name, lastname, username, email, password) VALUES ('" +
+    nombre +
+    "','" +
+    apellido +
+    "', '" +
+    usuario +
+    "','" +
+    email +
+    "','" +
+    hashPassword +
+    "')";
+  connection.query(registerUser, async (error, results) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.render("../src/view/register", {
+        alert: true,
+        alertTitle: "Registration",
+        alerMessage: "Registro Creado con exito",
+        alerIcon: "success",
+        showConfirmButton: false,
+        timer: 5500,
+        ruta: "login",
+      });
+    }
+  });
+};
 
 module.exports = createUsers;

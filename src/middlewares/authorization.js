@@ -1,10 +1,8 @@
 const express = require("express");
 const app = express();
-const read = require("../controllers/read");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
-const dotenv = require("dotenv").config();
-
+const connection = require("../controllers/connectionData");
 
 app.use(cookieParser());
 
@@ -26,10 +24,7 @@ function revisarCookie(req) {
     console.log("COOKIE", cookieJWT);
     const decodificada = jwt.verify(cookieJWT, process.env.JWT_SECRET_KEY);
     console.log(decodificada);
-    let userdata = read();
-    let usuarioAResvisar = userdata.find((user) => user.usuario == decodificada.user);
-    console.log(usuarioAResvisar);
-    if (!usuarioAResvisar) {
+    if (!decodificada) {
       return false;
     }
     return true;

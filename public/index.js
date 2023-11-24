@@ -14,39 +14,6 @@ function logout() {
 }
 logout();
 
-// const productos = [
-//   {
-//     id: 0,
-//     nombre: "Carpa Iglu para 4 personas",
-//     img: "https://github.com/DDDante1013/Backend-WildLife-2/blob/cc7e84312c37c9dc527c28927bf70f0e2df57bde/public/Imagenes/CARPAIGLU",
-//     precio: 135.0,
-//   },
-//   {
-//     id: 1,
-//     nombre: "Carpa Canadiense para 2 personas",
-//     img: "https://github.com/DDDante1013/Backend-WildLife-2/blob/cc7e84312c37c9dc527c28927bf70f0e2df57bde/public/Imagenes/public/imagenes/CARPACANADIENSE",
-//     precio: 35.0,
-//   },
-//   {
-//     id: 2,
-//     nombre: "Carpa BIKE PRO 2 - Northland",
-//     img: "https://github.com/DDDante1013/Backend-WildLife-2/blob/cc7e84312c37c9dc527c28927bf70f0e2df57bde/public/Imagenes/public/imagenes/carpa1",
-//     precio: 99.0,
-//   },
-//   {
-//     id: 3,
-//     nombre: "Carpa BIKE PRO 2 - Northland",
-//     img: "https://github.com/DDDante1013/Backend-WildLife-2/blob/cc7e84312c37c9dc527c28927bf70f0e2df57bde/public/Imagenes/public/imagenes/CARPACANADIENSE",
-//     precio: 99.0,
-//   },
-//   {
-//     id: 4,
-//     nombre: "Carpa BIKE PRO 2 - Northland",
-//     img: "https://github.com/DDDante1013/Backend-WildLife-2/blob/cc7e84312c37c9dc527c28927bf70f0e2df57bde/public/Imagenes/public/imagenes/CARPACANADIENSE",
-//     precio: 99.0,
-//   },
-// ];
-
 const contenedorTarjeta = document.getElementById("productos-container");
 
 function crearTarjetaProductos(product) {
@@ -54,13 +21,16 @@ function crearTarjetaProductos(product) {
     const nuevoProducto = document.createElement("article");
     nuevoProducto.classList = "tarjeta-producto";
     nuevoProducto.innerHTML = `
-    <img src="./Public/Imagenes/${producto.id}.jpg">
+    <img src="./Imagenes/${producto.id}.jpg">
     <h3 class="textoCarpa">${producto.nombre}</h3>  
     <p><strong>$${producto.precio}</strong></p>
     <button> Agregar al carrito</button>
     `;
     contenedorTarjeta.appendChild(nuevoProducto);
+    nuevoProducto
+      .getElementsByTagName("button")[0]
+      .addEventListener("click", () => agregarAlCarrito(producto));
   });
 }
 
-crearTarjetaProductos(productos);
+crearTarjetaProductos(baseDatosProductos);

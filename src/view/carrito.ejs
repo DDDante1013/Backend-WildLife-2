@@ -1,63 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WILD LIFE/Carrito</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@100&display=swap" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/7b4fce43cc.js" crossorigin="anonymous"></script>
-        <script defer src="index.js"></script>
-      </head>
-<body>
-  <%- include ("./partials/headerlogueado.ejs") %>
 
-    <div>
-        <table class="tablaCarrito">
-            <tr class="tituloTabla">
-                <th>Producto</th>
-                <th>Descripcion</th>
-                <th>Precio Unidad</th>
-                <th>Cantidad</th>
-                <th>Precio Total</th>
-                <th><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button></th>
-            </tr>
-<tr class="contenidoCarrito">
-    <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
-      <td> <p> Carpa 2 Personas</p></td>
-      <td><p> 1</p></td>
-      <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
-      <td> <p> 1</p> </td>
-      <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
-</tr>
-<tr class="contenidoCarrito">
-  <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
-    <td> <p> Carpa 2 Personas</p></td>
-    <td><p> 1</p></td>
-    <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
-    <td> <p> 1</p> </td>
-    <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
-</tr>
-<tr class="contenidoCarrito">
-  <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
-    <td> <p> Carpa 2 Personas</p></td>
-    <td><p> 1</p></td>
-    <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
-    <td> <p> 1</p> </td>
-    <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
-</tr>
-<tr class="contenidoCarrito">
-  <td> <img src="imagenes/CARPA CANADIENSE.jpg"/></td>
-    <td> <p> Carpa 2 Personas</p></td>
-    <td><p> 1</p></td>
-    <td> <button> <i class="fa-solid fa-minus "></i> </button> <span> 0 </span> <button> <i class="fa-solid fa-plus"></i> </button> </td>
-    <td> <p> 1</p> </td>
-    <td><button class="button-eliminar"> <i class="fa-solid fa-trash"></i></button> </td>
-</tr>
-        </table>
-    </div>
-    <%- include ("./partials/footer.ejs") %>
-</body>
+<%- include ("./partials/head.ejs") %>
+
+  <body>
+    <%- include ("./partials/headerlogueado.ejs") %>
+      <main>
+        <h2 class="titulo-principal-carrito">Carrito</h2>
+        <div class="contenedor-carrito">
+          <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+
+          <div id="carrito-productos" class="carrito-productos disabled">
+            <!-- Esto se va a completar con el JS -->
+          </div>
+
+          <div id="carrito-acciones" class="carrito-acciones disabled">
+            <div class="carrito-acciones-izquierda">
+              <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+            </div>
+            <div class="carrito-acciones-derecha">
+              <div class="carrito-acciones-total">
+                <p>Total:</p>
+                <p id="Total"></p>
+              </div>
+              <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+            </div>
+          </div>
+
+          <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i
+              class="bi bi-emoji-laughing"></i></p>
+
+        </div>
+      </main>
+      <%- include ("./partials/footer.ejs") %>
+  </body>
+
 </html>

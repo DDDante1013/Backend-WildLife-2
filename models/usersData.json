@@ -31,5 +31,60 @@
     "telefono": "111111111",
     "nacionalidad": "argentina",
     "nacimiento": ""
+  },
+  {
+    "id": 4,
+    "nombre": "gato",
+    "apellido": "bebe",
+    "usuario": "gatomiau",
+    "hashPassword": "$2b$10$M.64XYqhSzPYuCSE2ueENOtZQ50qzBN4Hgfu3TRCXbwwQyGiImi5C",
+    "email": "gatobebe@gmail.com",
+    "telefono": "1111111111",
+    "nacionalidad": "argentina",
+    "nacimiento": "2020-04-02"
+  },
+  {
+    "id": 5,
+    "nombre": "gato",
+    "apellido": "bebe",
+    "usuario": "gatomiau",
+    "hashPassword": "$2b$10$bDaF.zDhPxlaiyRff527uOHIL4X6Xhv2P9tqk131nYnMPNUf8pDxm",
+    "email": "gatobebe@gmail.com",
+    "telefono": "1111111111",
+    "nacionalidad": "argentina",
+    "nacimiento": "2020-04-02"
+  },
+  {
+    "id": 6,
+    "nombre": "juan",
+    "apellido": "carlos",
+    "usuario": "juanca10",
+    "hashPassword": "$2b$10$qWyChlYrmKLerZ7smcvTaejOo7kHAIEJDDczsw.oREbtums1a0MUO",
+    "email": "juanca10@gmail.com",
+    "telefono": "1111111111",
+    "nacionalidad": "argentina",
+    "nacimiento": "2020-04-02"
+  },
+  {
+    "id": 7,
+    "nombre": "papa",
+    "apellido": "nata",
+    "usuario": "papanata",
+    "hashPassword": "$2b$10$i.er1eoR/aZ/dycAxvAC7e220ukSBDQwECg6//zS872n98aub2AmO",
+    "email": "papa@gmail.com",
+    "telefono": "12345601",
+    "nacionalidad": "argentina",
+    "nacimiento": "2023-11-01"
+  },
+  {
+    "id": 8,
+    "nombre": "PEDRITO",
+    "apellido": "pedroni",
+    "usuario": "pedricapo",
+    "hashPassword": "$2b$10$EsPMnyYTmVvZk/E5YGIJI.MkCmOrFvCUrWrrXnNrqbz.Em5iNjdYq",
+    "email": "p@gmail.com",
+    "telefono": "03547637031",
+    "nacionalidad": "argentina",
+    "nacimiento": "2020-01-01"
   }
 ]

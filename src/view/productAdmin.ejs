@@ -7,28 +7,24 @@
 
     <%- include ("./partials/header.ejs") %>
 
-      <form class="login" action="/login" method="post">
+      <form class="login" action="/productAdmin" method="post">
         <div class="contenedor-inicio">
 
 
-          <h1 id="texto-inicio">Hola! Completa los datos para acceder a tu cuenta.</h1>
+          <h1 id="texto-inicio">GESTOR DE PRODUCTOS.</h1>
 
-          <label for="userName">Nombre de Usuario</label>
-          <input type="text" id="userName" name="userName" placeholder="Usuario" />
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="Contraseña" />
-          <div class="recordad-usuario">
-            <label for="rememberUser">Recordar Usuario</label>
-            <input type="checkbox" id="rememberUser" />
+          <label for="Product name">Nombre de producto</label>
+          <input type="text" id="userName" name="name" placeholder="Nombre Producto" />
+          <label for="price">Precio de producto</label>
+          <input type="number" id="price" name="price" placeholder="Precio Producto" />
+          <label for="description">Descripcion de producto</label>
+          <input type="text" id="description" name="description" placeholder="Descripcion Producto" />
+          <label for="Image">Imagen de producto</label>
+          <input type="url" id="image_url" name="image_url" placeholder="Imagen Producto" />
 
-          </div>
-          <div class="olvide-contraseña">
-            <label for="staylogged">Olvide contraseña</label>
-            <input type="checkbox" id="staylogged" />
-          </div>
+
           <button class="btn-1" type="submit">Ingresar</button>
       </form>
-      <p>¿Todavía no tenés una cuenta? - <a href="/register">Registrate</a></p>
       </div>
 
       <%- include ("./partials/footer.ejs") %>
