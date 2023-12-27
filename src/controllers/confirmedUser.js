@@ -52,6 +52,7 @@ const confirmedPassword = async (req, res) => {
             firstName: results[0].name,
             lastName: results[0].lastname,
             email: results[0].email,
+            rol: results[0].rol,
           };
           const token = jwt.sign(tokenPayload, process.env.JWT_SECRET_KEY, {
             expiresIn: process.env.JWT_EXPIRATION,

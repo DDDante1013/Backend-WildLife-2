@@ -23,7 +23,7 @@ function revisarCookie(req) {
       .slice(4);
     console.log("COOKIE", cookieJWT);
     const decodificada = jwt.verify(cookieJWT, process.env.JWT_SECRET_KEY);
-    console.log(decodificada);
+    console.log("DECODIFICADA", decodificada.rol);
     if (!decodificada) {
       return false;
     }

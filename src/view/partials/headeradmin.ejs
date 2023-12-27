@@ -1,32 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
+<header class="header">
+  <div class="logo">
+    <img id="logo-img" src="imagenes/LOGO.png" alt="logo" />
+  </div>
+  <nav class="nav-bar">
+    <ul class="nav-link">
+      <li class="item"><a href="/home">Home</a></li>
+      <li class="item"><a href="/gestorProductos">Productos</a>
+      </li>
 
-<%- include ("head.ejs") %>
-
-  <body>
-    <header class="header">
-      <div class="logo">
-        <img id="logo-img" src="imagenes/LOGO.png" alt="logo" />
-      </div>
-      <nav class="nav-bar">
-        <ul class="nav-link">
-          <li class="item"><a href="/home">Home</a></li>
-          <li class="item"><a href="/productos">Productos</a>
-          </li>
-          <li class="item"><a href="#">Contacto</a></li>
-          <li class="item"><a href="#">Usuarios</a>
-          </li>
-          <li class="miCuenta "><a href="#">Mi Cuenta</a>
-            <ul class="Submenu">
-              <li><a href="#"> Mi Perfil</a></li>
-              <li><a href="#"> Settings</a></li>
-              <button class="logout"> Logout</button>
-            </ul>
-          </li>
+      <li class="item"><a href="/gestorUsuarios">Usuarios</a>
+      </li>
+      <li class="miCuenta "><a href="#">Mi Cuenta</a>
+        <ul class="Submenu">
+          <li><a href="#"> Mi Perfil</a></li>
+          <li><a href="#"> Settings</a></li>
+          <button class="logout"> Logout</button>
         </ul>
-        <button class="button-menu"> <i class="fa-solid fa-bars"></i></button>
-      </nav>
-    </header>
-  </body>
-
-</html>
+      </li>
+    </ul>
+    <button class="button-menu"> <i class="fa-solid fa-bars"></i></button>
+  </nav>
+</header>

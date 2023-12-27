@@ -5,32 +5,69 @@
 
   <body class="inicio-sesion">
 
-    <%- include ("./partials/header.ejs") %>
+    <%- include ("./partials/headerAdmin.ejs") %>
 
-      <form class="login" action="/productAdmin" method="post">
-        <div class="contenedor-inicio">
+      <!-- <input type="text" id="searchInput" placeholder="...Buscador Productos..."> -->
+      <div id="contenedor-admin-producto">
+        <form class="login" action="/addProduct" method="post">
 
+          <div class="contenedor-inicio">
+            <h1>Crear Producto</h1>
+            <div class="subContainer">
+              <div class="subSubContainer">
+                <label for="productName">Nombre de producto</label>
+                <input type="text" id="productName" name="name" placeholder="Nombre Producto" />
+              </div>
+              <div class="subSubContainer">
+                <label for="description">Descripcion de producto</label>
+                <input type="text" id="description" name="description" placeholder="Descripcion Producto" />
+              </div>
+              <div class="subSubContainer"">
+                  <label for=" price">Precio de producto</label>
+                <input type="number" id="price" name="price" placeholder="Precio Producto" />
+              </div>
+              <div class="subSubContainer">
+                <label for="price">Stock</label>
+                <input type="number" id="stock" name="stock" placeholder="1" />
+              </div>
+              <div class="subSubContainer">
+                <label for=" image_url" ">Imagen de producto</label>
+                  <input type=" url" id="image_url" name="image_url" name="image_url" />
+              </div>
+              <div class="subSubContainer">
+                <button type="submit">Crear Producto</button>
+              </div>
+            </div>
 
-          <h1 id="texto-inicio">GESTOR DE PRODUCTOS.</h1>
+          </div>
+        </form>
 
-          <label for="Product name">Nombre de producto</label>
-          <input type="text" id="userName" name="name" placeholder="Nombre Producto" />
-          <label for="price">Precio de producto</label>
-          <input type="number" id="price" name="price" placeholder="Precio Producto" />
-          <label for="description">Descripcion de producto</label>
-          <input type="text" id="description" name="description" placeholder="Descripcion Producto" />
-          <label for="Image">Imagen de producto</label>
-          <input type="url" id="image_url" name="image_url" placeholder="Imagen Producto" />
+        <table>
+          <thead>
+            <tr>
+              <th>Codigo Producto</th>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Marca</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="data">
 
-
-          <button class="btn-1" type="submit">Ingresar</button>
-      </form>
+          </tbody>
+        </table>
       </div>
 
       <%- include ("./partials/footer.ejs") %>
+
+
         <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
         <% if (typeof alert !="undefined" ){ %>
+
           <script>
             Swal.fire({
               title: "<%=alertTitle %>",
@@ -39,11 +76,11 @@
               showconfirmButton: "<%= showConfirmButton%>",
               timer: "<%= timer %>",
             }).then(() => {
-              window.location = " /<%= ruta %>"
+              window.location.href = "/<%=ruta %>"
             });                        
           </script>
-
           <% } %>
+
   </body>
 
 </html>

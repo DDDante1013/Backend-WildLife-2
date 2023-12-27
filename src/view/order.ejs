@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include ("./partials/head.ejs") %>
+
+    <body>
+
+        <%- include ("./partials/headerlogueado.ejs") %>
+
+            <main>
+                <div class="orden-compra">
+                    <div class="cuadro-datos">
+                        <h1 id="texto-inicio">DATOS DEL VENDEDOR</h1>
+                        <div class="contedero-datos-vendedor">
+
+
+                            <div>
+                                <img id="logo-img" src="imagenes/LOGO.png" alt="logo" />
+
+                            </div>
+
+                            <div>
+                                <div class="nombre">
+                                    <div class="subSubContainer">
+                                        <p>Nombre de Empresa:</p>
+                                        <p class="datos-vendedor">Wild Life</p>
+                                    </div>
+                                    <div class="subSubContainer">
+                                        <p>CUIT:</p>
+                                        <p class="datos-vendedor">20-33411263-3</p>
+                                    </div>
+                                </div>
+                                <div class="nombre">
+                                    <div class="subSubContainer">
+                                        <p>Domicilo:</p>
+                                        <p class="datos-vendedor">El Halcon 963</p>
+                                    </div>
+                                    <div class="subSubContainer">
+                                        <p>Ciudad:</p>
+                                        <p class="datos-vendedor">Valle de Anisacate</p>
+                                    </div>
+                                    <div class="subSubContainer">
+                                        <p>Provincia:</p>
+                                        <p class="datos-vendedor">Cordoba</p>
+                                    </div>
+                                    <div class="subSubContainer">
+                                        <p>CP:</p>
+                                        <p class="datos-vendedor">5000</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cuadro-datos">
+                        <h1 id="texto-inicio">DATOS DEL COMPRADOR</h1>
+                        <div class="contedero-datos-vendedor">
+                            <div>
+                                <div class="nombre">
+                                    <div class="SubContainer">
+                                        <p>Nombre y Apellido:</p>
+                                        <p class="datos-vendedor">Wild Life</p>
+                                    </div>
+                                    <div class="subSubContainer">
+                                        <label for="productName">D.N.I:</label>
+                                        <input type="text" id="productName" name="name" value="1" />
+                                    </div>
+                                </div>
+                                <div class="nombre">
+                                    <div class="subSubContainer">
+                                        <label for="productName">Domicilio de Entrega:</label>
+                                        <input type="text" id="productName" name="name" value="1" />
+                                    </div>
+                                    <div class="subSubContainer">
+                                        <label for="productName">Localidad:</label>
+                                        <input type="text" id="productName" name="name" value="1" />
+                                    </div>
+                                    <div class="subSubContainer">
+                                        <label for="productName">Codigo postal:</label>
+                                        <input type="text" id="productName" name="name" value="1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Codigo Producto</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div> -->
+
+
+                <div class="contenedor-carrito">
+                    <p id="carrito-vacio" class="carrito-vacio disabled">Tu carrito está vacío. <i
+                            class="bi bi-emoji-frown"></i>
+                    </p>
+
+                    <div id="ordenes-compra" class="ordenes-compra disabled">
+                        <!-- Esto se va a completar con el JS -->
+                    </div>
+                    <div id="carrito-acciones" class="carrito-acciones disabled">
+                        <div class="carrito-acciones-izquierda">
+                            <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                        </div>
+                        <div class="carrito-acciones-derecha">
+                            <div class="carrito-acciones-total">
+                                <p>Total:</p>
+                                <p id="Total"></p>
+                            </div>
+                            <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar
+                                ahora</button>
+                        </div>
+                    </div>
+
+                    <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i
+                            class="bi bi-emoji-laughing"></i></p>
+
+                </div>
+
+
+
+            </main>
+
+            <%- include ("./partials/footer.ejs") %>
+
+    </body>
+
+</html>

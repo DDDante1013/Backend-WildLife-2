@@ -10,6 +10,26 @@
 }
 body {
   background: #edede9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.login button {
+  display: block;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 12px;
+  background-color: rgb(51, 66, 51);
+  -webkit-text-fill-color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.login button:hover {
+  background-color: #8a907f;
 }
 
 /* .inicio-sesion{
@@ -24,7 +44,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #718355;
+  background: rgb(51, 66, 51);
   height: 150px;
   width: 100%;
   padding: 5px;
@@ -77,7 +97,7 @@ body {
 }
 .header .Submenu {
   position: absolute;
-  background: #718355;
+  background: rgb(51, 66, 51);
   visibility: hidden;
   width: 103.5%;
   opacity: 0;
@@ -150,8 +170,51 @@ ul {
 #texto-banner:hover {
   transform: scale(1.15);
 }
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  outline: none;
+}
+
+#textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  border: none;
+}
+.terminos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminos input {
+  padding: 0px;
+}
+#searchInput {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  outline: none;
+}
+
 #listaProductos {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+}
+.noResults {
+  font-size: 20px;
+  color: red;
   text-align: center;
+  display: none;
 }
 .lista1 {
   display: flex;
@@ -176,15 +239,40 @@ ul {
   margin: -4px;
   padding: 0px;
 }
-.marcas {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.slider-marcas {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
 }
 
-.marcas img {
-  width: 17.5%;
+.slider-marcas .slider-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  -webkit-animation: scroll 25s linear infinite;
+  width: calc(300px * 6);
+}
+.slider-marcas .slide {
+  width: 100%;
+}
+
+.slider-marcas .slide img {
+  width: 100%;
   background: none;
+  padding: 20px;
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 3));
+    transform: translateX(calc(-200px * 3));
+  }
+}
+.texto2 {
+  margin-bottom: 75px;
 }
 p {
   color: black;
@@ -214,15 +302,16 @@ article img {
 
 #productos-container article h3,
 p {
-  color: white;
-  margin: 6px, 0;
+  color: #1e231f;
+  margin: 10px;
   text-align: center;
+  height: 35px;
 }
 #productos-container .tarjeta-producto {
-  background: #454742;
+  background: #657566;
   max-width: 300px;
-
-  padding: 10px;
+  border-radius: 10px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,13 +319,13 @@ p {
 
 #productos-container button {
   font-weight: 900;
-  font-size: 20px;
+  font-size: 15x;
   margin: 0;
   color: rgb(7, 72, 72);
   padding: 5px 10px;
   background: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.5s ease 0s;
 }
@@ -275,8 +364,8 @@ p {
   border: none;
   font-weight: 600;
   font-size: 15px;
-  border-radius: 0px;
-  background-color: #202d0b;
+  border-radius: 12px;
+  background-color: rgb(51, 66, 51);
   -webkit-text-fill-color: white;
   cursor: pointer;
   transition: 0.5s;
@@ -286,6 +375,10 @@ p {
   background-color: #8a907f;
 }
 
+.imagen-gestor-producto {
+  padding: 5px;
+  width: 20%;
+}
 /** CARRITO **/
 
 .titulo-principal-carrito {
@@ -406,17 +499,33 @@ p {
 .disabled {
   display: none;
 }
+#contenedor-admin-producto {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 50px;
+  align-items: center;
+  margin-right: 50px;
+}
 table {
-  margin: 50px auto;
-  table-layout: fixed;
-  width: 80%;
-  border-collapse: collapse;
-  border: 3px solid gray;
+  margin: 10px auto;
+  table-layout: auto;
+  width: 75%;
+  border-collapse: initial;
+  border: none;
+  border-radius: 15px;
+  background: azure;
+  text-align: center;
+  color: black;
+  font-weight: 500;
 }
 
-.tituloTabla {
-  background-color: #646562;
+thead tr th {
+  padding: 10px;
+  margin: 5px;
+  background-color: rgb(51, 66, 51);
   color: white;
+  border-radius: 15px;
 }
 .contenidoCarrito {
   text-align: center;
@@ -424,11 +533,14 @@ table {
 .contenidoCarrito img {
   width: 55%;
 }
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
+td,
+tr,
+tbody {
+  padding: 5px;
 }
+/* tr:nth-child(even) {
+  background-color: grey;
+} */
 .button-eliminar {
   background: none;
   margin: 5px;
@@ -449,9 +561,11 @@ tr {
   line-height: 60px;
   cursor: pointer;
 }
+/* ESTILOS FOOTER*/
 .footer {
   background-color: rgb(51, 66, 51);
   height: 250px;
+  margin-top: auto;
 }
 
 .footer .footer-datos {
@@ -500,14 +614,59 @@ tr {
   text-align: end;
   margin-top: -25px;
 }
-/* .login{
+.login {
   justify-content: left;
   background: linear-gradient(to top, rgb(0 0 0/00.5), rgb(0 0 0/00.5)),
-  url(imagenes/baner-login.jpg);
-  width: 100%;
-  height: 600px;
-    background-size:cover;
-} */
+    url(/imagenes/baner-login.jpg);
+  width: 25%;
+  height: 650px;
+}
+
+.cuadro-datos {
+  border: solid;
+  width: 1000px;
+  margin: 10px auto;
+  font-size: 12px;
+}
+.contedero-datos-vendedor {
+  display: flex;
+  width: 1000px;
+  padding: 2px;
+  font-size: 12px;
+}
+.datos-vendedor {
+  background: white;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.nombre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nombre div {
+  display: flex;
+  flex-direction: row;
+}
+.nombre input {
+  padding: 10px;
+  width: 200px;
+  height: 35px;
+}
+.botones-edit {
+  padding: 5px;
+}
+.btnBorrar {
+  align-content: end;
+  color: rgb(195, 7, 7);
+  scale: 1.5;
+}
+.btnEditar {
+  color: blue;
+  scale: 1.5;
+}
 /* .contenedor-inicio{
   display: flex;
   flex-direction: column;

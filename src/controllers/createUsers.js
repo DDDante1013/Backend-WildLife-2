@@ -9,9 +9,13 @@ const createUsers = async (req, res) => {
   let hashPassword = bcrypt.hashSync(req.body.password, salt);
   console.log(hashPassword);
   let email = req.body.email;
-
+  let nacimiento = req.body.nacimiento;
+  console.log("BORN", nacimiento);
+  const rol = "user";
+  dataUsers = req.body;
+  console.log(dataUsers);
   let registerUser =
-    "INSERT INTO users ( name, lastname, username, email, password) VALUES ('" +
+    "INSERT INTO users ( name, lastname, username, email, born, password,rol) VALUES ('" +
     nombre +
     "','" +
     apellido +
@@ -20,9 +24,13 @@ const createUsers = async (req, res) => {
     "','" +
     email +
     "','" +
+    nacimiento +
+    "','" +
     hashPassword +
+    "','" +
+    rol +
     "')";
-  connection.query(registerUser, async (error, results) => {
+  connection.query(registerUser, (error, results) => {
     if (error) {
       console.log(error);
     } else {

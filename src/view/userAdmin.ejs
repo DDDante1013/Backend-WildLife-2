@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include ("./partials/head.ejs") %>
+
+    <body class="inicio-sesion">
+
+        <%- include ("./partials/headerAdmin.ejs") %>
+
+
+            <div id="contenedor-admin-producto">
+                <form class="login" action="/addUser" method="post">
+                    <div class="contenedor-inicio">
+                        <h1>Crear Nuevo Administrador</h1>
+                        <div class="subContainer">
+                            <div class="subSubContainer">
+                                <label for="firstName">Nombre</label>
+                                <input type="text" id="firstName" name="firstName" />
+                            </div>
+                            <div class="subSubContainer">
+                                <label for="lastName">Apellido</label>
+                                <input type="text" id="lastName" name="lastName" />
+                            </div>
+                            <div class="subSubContainer">
+                                <label for="userName">Nombre de usuario</label>
+                                <input type=" text" id="usuario" name="userName" />
+                            </div>
+                            <div class="subSubContainer">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" />
+                            </div>
+                            <div class="subSubContainer">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" />
+                            </div>
+
+                            <div class="subSubContainer">
+                                <label for="nacimiento">Fecha de nacimiento</label>
+                                <input type="date" id="nacimiento" name="nacimiento" />
+                            </div>
+                            <button type="submit">Crear Usuario</button>
+                        </div>
+                    </div>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id_User</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Nombre Usuario</th>
+                            <th>Email</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataUser">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <%- include ("./partials/footer.ejs") %>
+
+
+
+
+
+                <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css"
+                    rel="stylesheet">
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+                <% if (typeof alert !="undefined" ){ %>
+
+                    <script>
+                        Swal.fire({
+                            title: "<%=alertTitle %>",
+                            text: "<%= alerMessage %>",
+                            icon: "<%=alerIcon %>",
+                            showconfirmButton: "<%= showConfirmButton%>",
+                            timer: "<%= timer %>",
+                        }).then(() => {
+                            window.location.href = "/<%=ruta %>"
+                        });                        
+                    </script>
+                    <% } %>
+
+    </body>
+
+</html>

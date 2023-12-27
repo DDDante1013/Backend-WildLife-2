@@ -4,35 +4,34 @@ const {
   accesoPublico,
   revisarCookie,
 } = require("../middlewares/authorization");
+const {
+  cargaProducts,
+  cargaunProduct,
+  deleteProduct,
+  editProduct,
+  update,
+} = require("../controllers/crudProductos");
+const { deleteUser } = require("../controllers/crudUser");
+const rol = require("../middlewares/rol");
 
 const connection = require("../controllers/connectionData");
-
-//
-// const { Sequelize, Model, DataTypes } = require("sequelize");
-
-// const sequelize = new Sequelize("mydb", "root", "Luci3006ddd@", {
-//   host: "localhost",
-//   dialect: "mysql",
-//   port: 3306,
-// });
 
 router.get("/login", (req, res) => {
   res.render("../src/view/login");
 });
 
-router.get("/home", accesoPublico, (req, res) => {
-  res.render("../src/view/home");
+router.get("/contacto", (req, res) => {
+  res.render("../src/view/formularioContacto");
 });
 
-// router.get("/productos", accesoPublico, (req, res) => {
-//   res.render("../src/view/products");
-// });
+router.get("/contactologuin", (req, res) => {
+  res.render("../src/view/Contactologueado");
+});
 
-router.get("/productos", accesoPublico, (req, res) => {
-  // const result = await connection.query("SELECT * FROM product");
-  // console.log(result);
-  // res.json(result);
-  res.render("../src/view/productAdmin");
+router.get("/home", accesoPublico, rol);
+
+router.get("/productos", (req, res) => {
+  res.render("../src/view/products");
 });
 
 router.get("/detalle", accesoPublico, (req, res) => {
@@ -46,5 +45,34 @@ router.get("/carrito", accesoPublico, (req, res) => {
 router.get("/register", (req, res) => {
   res.render("../src/view/REGISTER");
 });
+router.get("/order", accesoPublico, (req, res) => {
+  res.render("../src/view/order");
+});
+
+/* RUTAS PARA EL ADMIN */
+router.get("/cargaUsuarios", async (req, res) => {
+  const result = await connection.query("SELECT * FROM users");
+  res.json(result);
+});
+
+router.get("/gestorUsuarios", (req, res) => {
+  res.render("../src/view/userAdmin");
+});
+router.get("/deleteUser/:id_user", deleteUser);
+
+router.get("/gestorProductos", (req, res) => {
+  res.render("../src/view/productAdmin");
+});
+router.get("/delete/:id", deleteProduct);
+
+router.get("/update/:id", editProduct);
+router.post("/update/:id", update);
+
+router.get("/cargaProductos", async (req, res) => {
+  const result = await connection.query("SELECT * FROM product");
+  res.json(result);
+});
+
+router.get("/gestorProductos/:id", cargaunProduct);
 
 module.exports = router;

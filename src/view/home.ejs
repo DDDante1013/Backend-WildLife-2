@@ -6,7 +6,7 @@
 
   <body>
     <header>
-    <%- include ("./partials/headerlogueado.ejs") %>
+      <%- include ("./partials/headerlogueado.ejs") %>
     </header>
     <main>
       <div class="contenedor">
@@ -18,7 +18,7 @@
           </p>
         </div>
         <div class="Texto1">
-          <p>
+          <p class="textos-home">
             El camping es una excelente manera de pasar tiempo con amigos y
             familiares. Es una oportunidad para crear recuerdos que durarán toda
             la vida. Puedes pasar tiempo con tus seres queridos, hacer
@@ -31,9 +31,10 @@
             saludable y relajante de pasar el tiempo, el camping es la actividad
             perfecta para ti.
           </p>
+
         </div>
         <div class="Texto2">
-          <p>
+          <p class="textos-home">
             Podes aventurarte a vivir una vida lejos de las pantallas, alejado
             del ruido de la ciudad, donde podras encontrar paz, armonia y
             tranquilidad, para poder disfrutar de toda la naturaleza y su
@@ -85,16 +86,26 @@
             (y mantenidas) podrán acompañarte en innumerables aventuras. Aquí te
             dejamos las mejores:
           </p>
-          <div class="marcas">
-            <img src="imagenes/NL_logo_rgb.jpg" alt="" />
-            <img src="imagenes/spinit.jpg" alt="" />
-            <img src="imagenes/waterdog.jpg" alt="" />
+          <div class="slider-marcas">
+            <div class="slider-track">
+              <div class="slide"><img src="imagenes/NL_logo_rgb.jpg" alt="" /></div>
+              <div class="slide"> <img src="imagenes/spinit.jpg" alt="" /></div>
+              <div class="slide"><img src="imagenes/waterdog.jpg" alt="" /></div>
+              <div class="slide"><img src="imagenes/coleman.jpg" alt="" /></div>
+              <div class="slide"><img src="imagenes/hummer.jpg" alt="" /></div>
+              <div class="slide"><img src="imagenes/NL_logo_rgb.jpg" alt="" /></div>
+              <div class="slide"> <img src="imagenes/spinit.jpg" alt="" /></div>
+              <div class="slide"><img src="imagenes/waterdog.jpg" alt="" /></div>
+              <div class="slide"><img src="imagenes/coleman.jpg" alt="" /></div>
+              <div class="slide"><img src="imagenes/hummer.jpg" alt="" /></div>
+            </div>
           </div>
         </div>
         <hr />
     </main>
-    <footer >
+    <footer>
       <%- include ("./partials/footer.ejs") %>
     </footer>
   </body>
+
 </html>

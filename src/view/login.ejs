@@ -15,21 +15,24 @@
 
           <label for="userName">Nombre de Usuario</label>
           <input type="text" id="userName" name="userName" placeholder="Usuario" />
+
+
           <label for="password">Contraseña</label>
           <input type="password" id="password" name="password" placeholder="Contraseña" />
+
           <div class="recordad-usuario">
             <label for="rememberUser">Recordar Usuario</label>
             <input type="checkbox" id="rememberUser" />
-
           </div>
           <div class="olvide-contraseña">
             <label for="staylogged">Olvide contraseña</label>
             <input type="checkbox" id="staylogged" />
           </div>
           <button class="btn-1" type="submit">Ingresar</button>
+          <p>¿Todavía no tenés una cuenta? - <a href="/register">Registrate</a></p>
+        </div>
       </form>
-      <p>¿Todavía no tenés una cuenta? - <a href="/register">Registrate</a></p>
-      </div>
+
 
       <%- include ("./partials/footer.ejs") %>
         <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css" rel="stylesheet">
